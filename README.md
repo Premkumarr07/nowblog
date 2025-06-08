@@ -1,20 +1,61 @@
-<<<<<<< HEAD
 # nowblog
 
-A new Flutter project.
+A Flutter application demonstrating user management using the BLoC pattern, API integration, and clean architecture principles.
 
-## Getting Started
+![App Screenshot](lib/image/Screenshot%202025-06-08%20131526.png)
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
 
-A few resources to get you started if this is your first Flutter project:
+### 1. API Integration
+- Integrated with [DummyJSON Users API](https://dummyjson.com/users)
+- Pagination using `limit` and `skip`
+- Real-time search by user name
+- Infinite scrolling for user list
+- Nested fetch: user posts and todos
+  - [Posts API](https://dummyjson.com/posts/user/{userId})
+  - [Todos API](https://dummyjson.com/todos/user/{userId})
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 2. BLoC State Management
+- State management using [`flutter_bloc`](https://pub.dev/packages/flutter_bloc)
+- Separate events and states for:
+  - Fetching users
+  - Searching users
+  - Pagination
+  - Loading posts and todos
+- Handles loading, success, and error states
+- Clean business logic separation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# nowblog
->>>>>>> 59fdafde43be08243288e71305c7f90238b679af
+### 3. UI Features
+- **User List Screen**: Avatar, name, and email
+- **Search Bar**: Real-time filtering
+- **User Detail Screen**: Info + posts + todos
+- **Create Post Screen**: Add posts locally (title & body)
+- **Loading Indicators**
+- **Error Messages**
+
+### 4. Code Quality
+- Clean, modular folder structure
+- Follows Dart and Flutter best practices
+- Error handling and edge cases managed gracefully
+
+### ⭐ Bonus Features
+- Pull-to-refresh
+- (Optional) Offline caching using local storage
+- (Optional) Light/Dark mode toggle
+
+---
+
+## 🔧 Getting Started
+
+### Prerequisites
+- Flutter SDK
+- Android Studio / VS Code
+- Internet access for API calls
+
+### Setup Instructions
+
+```bash
+git clone https://github.com/Premkumarr07/nowblog.git
+cd nowblog
+flutter pub get
+flutter run
