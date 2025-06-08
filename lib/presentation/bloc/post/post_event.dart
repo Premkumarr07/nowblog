@@ -6,7 +6,10 @@ abstract class PostEvent extends Equatable {
 
   @override
   List<Object> get props => [];
-}
+}git add .
+git commit -m "Your message about the changes"
+git push
+
 
 class FetchUserPostsEvent extends PostEvent {
   final int userId;
